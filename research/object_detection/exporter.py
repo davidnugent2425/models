@@ -458,7 +458,7 @@ def _export_inference_graph(input_type,
       clear_devices=True,
       initializer_nodes='')
 
-  write_saved_model(saved_model_path, frozen_graph_def,
+  write_saved_model(saved_model_path, trained_checkpoint_prefix,
                     placeholder_tensor, outputs)
 
 
