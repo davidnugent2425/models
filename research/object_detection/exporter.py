@@ -298,6 +298,7 @@ def _export_inference_graph(input_type,
                             additional_output_tensor_names=None,
                             input_shape=None,
                             optimize_graph=True,
+                            write_inference_graph=False,
                             output_collection_name='inference_op'):
   """Export helper."""
   #tf.gfile.MakeDirs(output_directory)
