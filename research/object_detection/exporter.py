@@ -286,7 +286,7 @@ def add_output_tensor_nodes(postprocessed_tensors,
   return outputs
 
 
-def _write_saved_model(saved_model_path,
+def write_saved_model(saved_model_path,
                        trained_checkpoint_prefix,
                        inputs,
                        outputs):
