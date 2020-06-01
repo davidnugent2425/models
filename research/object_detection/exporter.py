@@ -298,7 +298,7 @@ def write_saved_model(saved_model_path,
     outputs: A tensor dictionary containing the outputs of a DetectionModel.
   """
   saver = tf.train.Saver()
-  with session.Session() as sess:
+  with tf.Session() as sess:
     saver.restore(sess, trained_checkpoint_prefix)
     builder = tf.saved_model.builder.SavedModelBuilder(saved_model_path)
 
