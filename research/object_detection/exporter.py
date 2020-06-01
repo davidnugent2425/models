@@ -312,14 +312,14 @@ def write_saved_model(saved_model_path,
         tf.saved_model.signature_def_utils.build_signature_def(
               inputs=tensor_info_inputs,
               outputs=tensor_info_outputs,
-              method_name=signature_constants.PREDICT_METHOD_NAME))
+              method_name=tf.saved_model.signature_constants.PREDICT_METHOD_NAME))
 
     builder.add_meta_graph_and_variables(
           sess, [tf.saved_model.tag_constants.SERVING],
           signature_def_map={
               'detection_signature':
                   detection_signature,
-              signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY:
+              tf.saved_model.signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY:
                   detection_signature,
           },
       )
